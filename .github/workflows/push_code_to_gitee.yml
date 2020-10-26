@@ -1,32 +1,19 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the main branch
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+on: push
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  run:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Mirror the Github repos to Gitee
-      uses: Yikun/hub-mirror-action@master
+      uses: Yikun/hub-mirror-action@v0.10
       with: 
         src: github/BruceWong96
         dst: gitee/brucewong96
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token:  ${{ secrets.GITEE_TOKEN }}
-        white_list: "TestGithubAction"
+        white_list: 'TestGithubAction'
         force_update: true
         debug: true
