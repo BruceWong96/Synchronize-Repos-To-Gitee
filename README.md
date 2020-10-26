@@ -1,3 +1,1 @@
-# TestGithubAction
-测试 github Action
-Test
+# 利用 Github Action 把 rep 同步到 Gitee 中
