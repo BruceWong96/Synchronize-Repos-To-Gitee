@@ -8,7 +8,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Mirror the Github repos to Gitee
-      uses: Yikun/hub-mirror-action@v0.10
+      uses: BruceWong96/hub-mirror-action@v0.10
       with: 
         src: github/BruceWong96
         dst: gitee/brucewong96
