@@ -14,6 +14,6 @@ jobs:
         dst: gitee/brucewong96
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token:  ${{ secrets.GITEE_TOKEN }}
-        white_list: 'TestGithubAction'
+        white_list: 'Advanced-BigData,WriteCode'
         force_update: true
         debug: true
